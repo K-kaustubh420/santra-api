@@ -791,6 +791,7 @@ async def list_openai_models():
 @app.post("/v1/chat/completions", response_model=OpenAIChatCompletionResponse)
 async def openai_chat_completions(req: ChatCompletionRequest):
     log.info("COMPLETIONS DEBUG: model=%r stream=%r", req.model, req.stream)
+    log.info("SANTRA DEBUG model=%r stream=%r", req.model, req.stream)
     provider = provider_for_model(req.model)
     result = await execute_chat(
         prompt_from_messages(req.messages),
