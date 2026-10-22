@@ -1,0 +1,7 @@
+fastapi
+uvicorn
+playwright
+python-dotenv
+httpx
+python-multipart
+streamlit>=1.57
